@@ -10,7 +10,7 @@ def kthSmallest(matrix, k):
             flatten_list.append(item)
     sorted_list = sorted(flatten_list)
     end1st = timer()
-    return f'{sorted_list[k - 1]} with {end1st}'
+    return f'{sorted_list[k - 1]} with {end1st-start1st}'
 
 
 def kthSmallestNumpy(matrix, k):
@@ -18,7 +18,7 @@ def kthSmallestNumpy(matrix, k):
     matrix = np.array(matrix)
     flatted_list = sorted(matrix.flatten().tolist())
     end2nd = timer()
-    return f'{flatted_list[k - 1]} with {end2nd}'
+    return f'{flatted_list[k - 1]} with {end2nd-start2nd}'
 
 
 if __name__ == '__main__':
