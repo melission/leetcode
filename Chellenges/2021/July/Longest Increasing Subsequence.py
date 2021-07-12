@@ -6,8 +6,9 @@ def lengthOfLIS(nums) -> int:
 
     for i in range(1, array_size):
         for j in range(0, i):
-            print(f"nums[i] {nums[i]}, nums[j] {nums[j]};\n "
-                  f"li[i] {li[i]}, li[j] {li[j]}, and li[j]+1 {li[j]+1}\n "
+            print(f"i {i}, j {j}, \n"
+                  f"nums[i] {nums[i]}, nums[j] {nums[j]};\n"
+                  f"li[{i}] {li[i]}, li[{j}] {li[j]}, and li[{j}]+1 {li[j]+1}\n"
                   f"full nums list {nums}, li list {li}\n")
             if nums[i] > nums[j] and li[i] < li[j]+1:
                 li[i] = li[j]+1
@@ -16,5 +17,5 @@ def lengthOfLIS(nums) -> int:
 
 if __name__ == '__main__':
     print(lengthOfLIS(
-        [7,7,7,7,7,7,7]
+        [0, 1, 0, 3, 2, 3]
     ))
