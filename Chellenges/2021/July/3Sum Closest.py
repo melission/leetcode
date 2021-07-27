@@ -8,6 +8,8 @@ def threeSumClosest(arr: list, target: int) -> int:
     for i in range(len(arr)-2):
         start = i+1
         end = len(arr)-1
+        if i > 0 and arr[i] == arr[i-1]:
+            continue
         while start < end:
             cur_sum = arr[i]+arr[start]+arr[end]
             if abs(target - cur_sum) < abs(target-nearest):
