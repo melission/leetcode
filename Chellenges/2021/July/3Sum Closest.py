@@ -1,9 +1,9 @@
 # https://leetcode.com/explore/challenge/card/july-leetcoding-challenge-2021/611/week-4-july-22nd-july-28th/3828/
-import sys
+
 
 def threeSumClosest(arr: list, target: int) -> int:
     arr.sort()
-    nearest = sys.maxsize
+    nearest = 2**31-1
 
     for i in range(len(arr)-2):
         start = i+1
